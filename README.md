@@ -1,7 +1,7 @@
 # demoSwift
 
 LoginPage
-![Image](./image/LoginPage.png | width=100)
+![Image](./image/LoginPage.png)
 
 UserPage
 ![Image](./image/UserPage.png)
