@@ -33,7 +33,7 @@ class UserViewController : UIViewController {
     func handleDataUpdate() {
         DispatchQueue.main.async { [self] in
             self.usernameTextField.text = viewModel.getUserName()
-            self.emailTextField.text = viewModel.getEmailVerifiedStatus()
+            self.emailTextField.text = viewModel.getEmail()
             self.emailVerifiedTextField.text = viewModel.getEmailVerifiedStatus()
             self.registerTimeTextField.text = viewModel.getRegisterTime()
             self.dataUpdateTimeTextField.text = viewModel.getUpdateTime()
