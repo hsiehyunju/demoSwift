@@ -11,4 +11,8 @@ class LoginViewModel {
     
     weak var coordinator : AppCoordinator!
     
+    func toUserPage() {
+        coordinator.toUserPage()
+    }
+    
 }
