@@ -14,5 +14,17 @@ class UserViewController : UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        // 更新數據
+        handleDataUpdate(userModel: viewModel.userModel)
+        
+        // 設定數據更新通知
+        viewModel.dataUpdated = { [weak self] userModel in
+            self?.handleDataUpdate(userModel: userModel)
+        }
+    }
+    
+    func handleDataUpdate(userModel: UserModel) {
+        
     }
 }
