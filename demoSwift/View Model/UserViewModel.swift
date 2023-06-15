@@ -9,4 +9,6 @@ import Foundation
 
 class UserViewModel {
     
+    weak var coordinator : AppCoordinator!
+    
 }
