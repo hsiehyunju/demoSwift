@@ -77,7 +77,7 @@ class WebService {
     /**
      透過 API 更新使用者資料
      */
-    func update(userModel: UserModel, param: Dictionary<String, Any>, completion: @escaping(Result<String, ServiceError>) -> Void) {
+    func update(userModel: UserModel, param: Dictionary<String, Any>, completion: @escaping(Result<UpdateDataModel, ServiceError>) -> Void) {
         
         // 建立 URLComponents 來組合 API
         var components = getApiBaseURL()
@@ -109,11 +109,15 @@ class WebService {
                     // 印出 Server 回傳的 json
                     if let jsonString = String(data: data, encoding: .utf8) {
                         print("伺服器回傳: \(jsonString)")
-                        completion(.success(jsonString))
                     } else {
                         print("無法將伺服器回傳的 data 轉為字串")
                         completion(.failure(.decodingError))
                     }
+                    
+                    // 將 json 轉為 UserModel
+                    let decoder = JSONDecoder()
+                    let updateModel = try decoder.decode(UpdateDataModel.self, from: data)
+                    completion(.success(updateModel))
                 } catch {
                     completion(.failure(.decodingError))
                 }
