@@ -9,6 +9,9 @@ import Foundation
 import UIKit
 
 class UserViewController : UIViewController {
+    
+    var viewModel : UserViewModel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     }
