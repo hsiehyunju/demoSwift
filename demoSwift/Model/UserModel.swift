@@ -14,5 +14,7 @@ struct UserModel {
     var isVerifiedReportEmail: Bool
     var createdAt: Date
     var updateAt: Date
+    var timezone: Int
+    var parameter: Int
     var sessionToken: String
 }
