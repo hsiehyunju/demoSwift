@@ -43,7 +43,7 @@ class AppCoordinator: Coordinator {
         }
     }
     
-    func toUserPage() {
+    func toUserPage(userModel: UserModel) {
         DispatchQueue.main.async {
             // 實例化 Login View Controller
             let userViewController = self.storyboard.instantiateViewController(withIdentifier: "UserViewController") as! UserViewController
@@ -53,6 +53,7 @@ class AppCoordinator: Coordinator {
             
             // 將 coordinator 傳給 view model
             userViewModel.coordinator = self
+            userViewModel.userModel = userModel
             
             // 將 view model 指定給 view controller
             userViewController.viewModel = userViewModel
