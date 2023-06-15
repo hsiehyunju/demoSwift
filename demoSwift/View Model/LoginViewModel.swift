@@ -11,8 +11,21 @@ class LoginViewModel {
     
     weak var coordinator : AppCoordinator!
     
-    func toUserPage() {
-        coordinator.toUserPage()
+    var userModel : UserModel!
+    
+    func toUserPage(userModel: UserModel) {
+        coordinator.toUserPage(userModel: userModel)
     }
     
+    func signIn(username: String, password: String) {
+        WebService().signIn(username: username, password: password) { result in
+            do {
+                let userModel = try result.get()
+                self.toUserPage(userModel: userModel)
+                
+            } catch let error {
+                print(error.localizedDescription)
+            }
+        }
+    }
 }
