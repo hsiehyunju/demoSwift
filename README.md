@@ -1,7 +1,7 @@
 # demoSwift
 
 LoginPage
-![Image](./image/LoginPage.png)
+<img src="https://github.com/hsiehyunju/demoSwift/blob/main/image/LoginPage.png" width=200>
 
 UserPage
-![Image](./image/UserPage.png)
+<img src="https://github.com/hsiehyunju/demoSwift/blob/main/image/UserPage.png" width=200>
