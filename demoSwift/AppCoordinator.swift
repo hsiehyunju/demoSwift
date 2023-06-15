@@ -26,34 +26,38 @@ class AppCoordinator: Coordinator {
     }
     
     func toLoginPage() {
-        // 實例化 Login View Controller
-        let loginViewController = storyboard.instantiateViewController(withIdentifier: "LoginViewController") as! LoginViewController
-        
-        // 實例化 View Model
-        let loginViewModel = LoginViewModel.init()
-        
-        // 將 coordinator 傳給 view model
-        loginViewModel.coordinator = self
-        
-        // 將 view model 指定給 view controller
-        loginViewController.viewModel = loginViewModel
-        
-        navigationController.pushViewController(loginViewController, animated: true)
+        DispatchQueue.main.async {
+            // 實例化 Login View Controller
+            let loginViewController = self.storyboard.instantiateViewController(withIdentifier: "LoginViewController") as! LoginViewController
+            
+            // 實例化 View Model
+            let loginViewModel = LoginViewModel.init()
+            
+            // 將 coordinator 傳給 view model
+            loginViewModel.coordinator = self
+            
+            // 將 view model 指定給 view controller
+            loginViewController.viewModel = loginViewModel
+            
+            self.navigationController.pushViewController(loginViewController, animated: true)
+        }
     }
     
     func toUserPage() {
-        // 實例化 Login View Controller
-        let userViewController = storyboard.instantiateViewController(withIdentifier: "UserViewController") as! UserViewController
-        
-        // 實例化 View Model
-        let userViewModel = UserViewModel.init()
-        
-        // 將 coordinator 傳給 view model
-        userViewModel.coordinator = self
-        
-        // 將 view model 指定給 view controller
-        userViewController.viewModel = userViewModel
-        
-        navigationController.pushViewController(userViewController, animated: true)
+        DispatchQueue.main.async {
+            // 實例化 Login View Controller
+            let userViewController = self.storyboard.instantiateViewController(withIdentifier: "UserViewController") as! UserViewController
+            
+            // 實例化 View Model
+            let userViewModel = UserViewModel.init()
+            
+            // 將 coordinator 傳給 view model
+            userViewModel.coordinator = self
+            
+            // 將 view model 指定給 view controller
+            userViewController.viewModel = userViewModel
+            
+            self.navigationController.pushViewController(userViewController, animated: true)
+        }
     }
 }
