@@ -15,14 +15,30 @@ enum ServiceError: Error {
 
 
 class WebService {
+    
+    func getApiBaseURL() -> URLComponents {
+        var components = URLComponents()
+        components.scheme = "https"
+        components.host = "watch-master-staging.herokuapp.com"
+        return components
+    }
+    
+    /**
+     透過 API 登入取得使用者資料
+     */
     func signIn(username: String, password: String, completion: @escaping(Result<UserModel, ServiceError>) -> Void) {
         
-        // 組合 API
-        let urlString = "https://watch-master-staging.herokuapp.com/api/login?username=\(username)&password=\(password)"
+        // 建立 URLComponents 來組合 API
+        var components = getApiBaseURL()
+        components.path = "/api/login"
+            
+        // 创建查询参数
+        let usernameItem = URLQueryItem(name: "username", value: username)
+        let passwordItem = URLQueryItem(name: "password", value: password)
+        components.queryItems = [usernameItem, passwordItem]
         
         // 建立伺服器請求
-        let url = URL(string: urlString)
-        var request = URLRequest(url: url!)
+        var request = URLRequest(url: components.url!)
         request.httpMethod = "POST"
         
         // 增加自訂義標頭
