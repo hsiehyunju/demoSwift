@@ -32,7 +32,7 @@ class WebService {
         var components = getApiBaseURL()
         components.path = "/api/login"
             
-        // 创建查询参数
+        // 建立查詢參數
         let usernameItem = URLQueryItem(name: "username", value: username)
         let passwordItem = URLQueryItem(name: "password", value: password)
         components.queryItems = [usernameItem, passwordItem]
@@ -72,5 +72,54 @@ class WebService {
                 }
             }
         }.resume()
+    }
+    
+    /**
+     透過 API 更新使用者資料
+     */
+    func update(userModel: UserModel, param: Dictionary<String, Any>, completion: @escaping(Result<String, ServiceError>) -> Void) {
+        
+        // 建立 URLComponents 來組合 API
+        var components = getApiBaseURL()
+        components.path = "/api/users/\(userModel.objectId)"
+        
+        // 建立伺服器請求
+        var request = URLRequest(url: components.url!)
+        request.httpMethod = "PUT"
+        
+        // 建立查詢參數
+        let queryItems = param.map { URLQueryItem(name: $0.key, value: "\($0.value)") }
+        components.queryItems = queryItems
+        
+        // 增加自訂義標頭
+        request.addValue("vqYuKPOkLQLYHhk4QTGsGKFwATT4mBIGREI2m8eD", forHTTPHeaderField: "X-Parse-Application-Id")
+        request.addValue("", forHTTPHeaderField: "X-Parse-REST-API-Key")
+        request.addValue(userModel.sessionToken, forHTTPHeaderField: "X-Parse-Session-Token")
+        
+        // 發送使用者資料更新
+        URLSession.shared.dataTask(with: request) { data, response, error in
+            
+            if error != nil {
+                completion(.failure(.domainError))
+            }
+            
+            if let data = data {
+                do {
+                    
+                    // 印出 Server 回傳的 json
+                    if let jsonString = String(data: data, encoding: .utf8) {
+                        print("伺服器回傳: \(jsonString)")
+                        completion(.success(jsonString))
+                    } else {
+                        print("無法將伺服器回傳的 data 轉為字串")
+                        completion(.failure(.decodingError))
+                    }
+                } catch {
+                    completion(.failure(.decodingError))
+                }
+            }
+        }.resume()
+        
+        
     }
 }
