@@ -88,9 +88,117 @@
                     <view key="view" contentMode="scaleToFill" id="C8D-Aa-CGF">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="使用者名稱" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LpS-43-jga">
+                                <rect key="frame" x="39.333333333333343" y="109" width="314.33333333333326" height="21"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <color key="textColor" systemColor="systemPinkColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="test" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="E46-EE-laf">
+                                <rect key="frame" x="39.333333333333343" y="145" width="314.33333333333326" height="34"/>
+                                <color key="backgroundColor" systemColor="systemPinkColor"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" textContentType="username"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="電子信箱" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HdW-4y-aZi">
+                                <rect key="frame" x="39.333333333333343" y="199" width="314.33333333333326" height="21"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <color key="textColor" systemColor="systemPinkColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="test@test.com" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bit-kH-eWR">
+                                <rect key="frame" x="39.333333333333343" y="235" width="314.33333333333326" height="34"/>
+                                <color key="backgroundColor" systemColor="systemPinkColor"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" textContentType="email"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="未認證" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bRR-Bs-WI4">
+                                <rect key="frame" x="293.66666666666669" y="238.33333333333334" width="52" height="27.333333333333343"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="註冊時間" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ypb-nw-QqH">
+                                <rect key="frame" x="39.333333333333343" y="289" width="314.33333333333326" height="21"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <color key="textColor" systemColor="systemPinkColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="test@test.com" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vTS-c3-0J1">
+                                <rect key="frame" x="39.333333333333343" y="325" width="314.33333333333326" height="34"/>
+                                <color key="backgroundColor" systemColor="systemPinkColor"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" textContentType="date-time"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="資料更新時間" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d0e-gF-bKF">
+                                <rect key="frame" x="39.333333333333343" y="379" width="314.33333333333326" height="21"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <color key="textColor" systemColor="systemPinkColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="test@test.com" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3oz-A3-2EQ">
+                                <rect key="frame" x="39.333333333333343" y="415" width="314.33333333333326" height="34"/>
+                                <color key="backgroundColor" systemColor="systemPinkColor"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" textContentType="date-time"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="svr-jX-G6k">
+                                <rect key="frame" x="39.333333333333343" y="499" width="314.33333333333326" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="更新時區"/>
+                                <connections>
+                                    <action selector="updateTimezoneButtonTapped:" destination="hIz-B7-utp" eventType="touchUpInside" id="FBL-Du-pIr"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="bxe-4N-6ld"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="HdW-4y-aZi" firstAttribute="width" secondItem="LpS-43-jga" secondAttribute="width" id="2v7-dW-QYd"/>
+                            <constraint firstItem="LpS-43-jga" firstAttribute="top" secondItem="bxe-4N-6ld" secondAttribute="top" constant="50" id="4ud-SX-pFJ"/>
+                            <constraint firstItem="3oz-A3-2EQ" firstAttribute="centerX" secondItem="d0e-gF-bKF" secondAttribute="centerX" id="5e2-sU-9nx"/>
+                            <constraint firstItem="bRR-Bs-WI4" firstAttribute="height" secondItem="bit-kH-eWR" secondAttribute="height" multiplier="0.8" id="5w3-MF-6Zw"/>
+                            <constraint firstItem="HdW-4y-aZi" firstAttribute="centerX" secondItem="LpS-43-jga" secondAttribute="centerX" id="7Lq-yP-UEV"/>
+                            <constraint firstItem="Ypb-nw-QqH" firstAttribute="width" secondItem="bit-kH-eWR" secondAttribute="width" id="At2-5X-7vm"/>
+                            <constraint firstItem="3oz-A3-2EQ" firstAttribute="top" secondItem="d0e-gF-bKF" secondAttribute="bottom" constant="15" id="DBh-XV-lza"/>
+                            <constraint firstItem="LpS-43-jga" firstAttribute="width" secondItem="C8D-Aa-CGF" secondAttribute="width" multiplier="0.8" id="ElE-yr-bjf"/>
+                            <constraint firstItem="bit-kH-eWR" firstAttribute="top" secondItem="HdW-4y-aZi" secondAttribute="bottom" constant="15" id="GJi-BQ-Puc"/>
+                            <constraint firstItem="svr-jX-G6k" firstAttribute="top" secondItem="3oz-A3-2EQ" secondAttribute="bottom" constant="50" id="KcU-Nb-ZjE"/>
+                            <constraint firstItem="bRR-Bs-WI4" firstAttribute="centerY" secondItem="bit-kH-eWR" secondAttribute="centerY" id="KhX-Ks-Nz1"/>
+                            <constraint firstItem="vTS-c3-0J1" firstAttribute="width" secondItem="Ypb-nw-QqH" secondAttribute="width" id="On3-Ra-XUO"/>
+                            <constraint firstItem="d0e-gF-bKF" firstAttribute="top" secondItem="vTS-c3-0J1" secondAttribute="bottom" constant="20" id="OrS-Ao-Bf9"/>
+                            <constraint firstItem="vTS-c3-0J1" firstAttribute="top" secondItem="Ypb-nw-QqH" secondAttribute="bottom" constant="15" id="Stm-I0-sPX"/>
+                            <constraint firstItem="svr-jX-G6k" firstAttribute="width" secondItem="3oz-A3-2EQ" secondAttribute="width" id="Tud-EV-vuU"/>
+                            <constraint firstItem="d0e-gF-bKF" firstAttribute="width" secondItem="vTS-c3-0J1" secondAttribute="width" id="X1j-Gn-nBN"/>
+                            <constraint firstItem="bit-kH-eWR" firstAttribute="centerX" secondItem="HdW-4y-aZi" secondAttribute="centerX" id="ZVa-eL-gtA"/>
+                            <constraint firstItem="vTS-c3-0J1" firstAttribute="centerX" secondItem="Ypb-nw-QqH" secondAttribute="centerX" id="gO6-9W-b0d"/>
+                            <constraint firstItem="E46-EE-laf" firstAttribute="centerX" secondItem="LpS-43-jga" secondAttribute="centerX" id="gXV-Nt-hes"/>
+                            <constraint firstItem="bRR-Bs-WI4" firstAttribute="leading" secondItem="bit-kH-eWR" secondAttribute="trailing" constant="-60" id="gZX-VR-6VZ"/>
+                            <constraint firstItem="Ypb-nw-QqH" firstAttribute="centerX" secondItem="bit-kH-eWR" secondAttribute="centerX" id="jdy-I0-oGt"/>
+                            <constraint firstItem="svr-jX-G6k" firstAttribute="centerX" secondItem="3oz-A3-2EQ" secondAttribute="centerX" id="jmU-Yf-hdE"/>
+                            <constraint firstItem="HdW-4y-aZi" firstAttribute="top" secondItem="E46-EE-laf" secondAttribute="bottom" constant="20" id="kQ1-uh-MlZ"/>
+                            <constraint firstItem="3oz-A3-2EQ" firstAttribute="width" secondItem="d0e-gF-bKF" secondAttribute="width" id="m8K-Zs-WrH"/>
+                            <constraint firstItem="Ypb-nw-QqH" firstAttribute="top" secondItem="bit-kH-eWR" secondAttribute="bottom" constant="20" id="mSb-ZL-0HV"/>
+                            <constraint firstItem="LpS-43-jga" firstAttribute="centerX" secondItem="bxe-4N-6ld" secondAttribute="centerX" id="p6m-3E-VZf"/>
+                            <constraint firstItem="d0e-gF-bKF" firstAttribute="centerX" secondItem="vTS-c3-0J1" secondAttribute="centerX" id="rb2-qU-aAw"/>
+                            <constraint firstItem="E46-EE-laf" firstAttribute="top" secondItem="LpS-43-jga" secondAttribute="bottom" constant="15" id="shM-UD-uCd"/>
+                            <constraint firstItem="bit-kH-eWR" firstAttribute="width" secondItem="HdW-4y-aZi" secondAttribute="width" id="skN-Fd-oEL"/>
+                            <constraint firstItem="E46-EE-laf" firstAttribute="width" secondItem="LpS-43-jga" secondAttribute="width" id="vxe-Nt-qaD"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="dataUpdateTimeTextField" destination="3oz-A3-2EQ" id="EWZ-Ri-fyR"/>
+                        <outlet property="emailTextField" destination="bit-kH-eWR" id="eJb-9g-oVo"/>
+                        <outlet property="emailVerifiedTextField" destination="bRR-Bs-WI4" id="sV8-aS-d7E"/>
+                        <outlet property="registerTimeTextField" destination="vTS-c3-0J1" id="BUM-W8-EiV"/>
+                        <outlet property="updateTimezoneButton" destination="svr-jX-G6k" id="UAj-ZN-Q7r"/>
+                        <outlet property="usernameTextField" destination="E46-EE-laf" id="CXV-ge-6NZ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0V8-Np-cWa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
