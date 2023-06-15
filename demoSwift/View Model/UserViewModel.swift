@@ -11,7 +11,7 @@ class UserViewModel {
     weak var coordinator : AppCoordinator!
     
     var userModel: UserModel!
-    var dataUpdated: ((UserModel) -> Void)?
+    var dataUpdated: (() -> Void)?
     
     func updateUserData() {
         WebService().update(userModel: userModel, param: ["timezone":8]) { result in
@@ -20,7 +20,7 @@ class UserViewModel {
                 // 更新資料
                 self.userModel.updatedAt = updateModel.updatedAt
                 // 通知資料更新
-                self.dataUpdated?(self.userModel)
+                self.dataUpdated?()
             } catch let error {
                 print(error.localizedDescription)
             }
