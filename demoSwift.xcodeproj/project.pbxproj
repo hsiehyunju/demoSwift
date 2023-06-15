@@ -13,6 +13,7 @@
 		C12355342A3AB5F0008DD790 /* UserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C12355332A3AB5F0008DD790 /* UserViewModel.swift */; };
 		C12355372A3AC4FB008DD790 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C12355362A3AC4FB008DD790 /* UserModel.swift */; };
 		C123553B2A3ACF26008DD790 /* WebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C123553A2A3ACF26008DD790 /* WebService.swift */; };
+		C123553D2A3AF70B008DD790 /* UpdateDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C123553C2A3AF70B008DD790 /* UpdateDataModel.swift */; };
 		C18CA5E62A3AAA0F006E336B /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C18CA5E52A3AAA0F006E336B /* Coordinator.swift */; };
 		C18CA5E82A3AAC7E006E336B /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C18CA5E72A3AAC7E006E336B /* AppCoordinator.swift */; };
 		C1FA74032A39A7D700385D9A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1FA74022A39A7D700385D9A /* AppDelegate.swift */; };
@@ -29,6 +30,7 @@
 		C12355332A3AB5F0008DD790 /* UserViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewModel.swift; sourceTree = "<group>"; };
 		C12355362A3AC4FB008DD790 /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
 		C123553A2A3ACF26008DD790 /* WebService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebService.swift; sourceTree = "<group>"; };
+		C123553C2A3AF70B008DD790 /* UpdateDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateDataModel.swift; sourceTree = "<group>"; };
 		C18CA5E52A3AAA0F006E336B /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		C18CA5E72A3AAC7E006E336B /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		C1FA73FF2A39A7D700385D9A /* demoSwift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = demoSwift.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -73,6 +75,7 @@
 			isa = PBXGroup;
 			children = (
 				C12355362A3AC4FB008DD790 /* UserModel.swift */,
+				C123553C2A3AF70B008DD790 /* UpdateDataModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -196,6 +199,7 @@
 				C123552E2A3AB43D008DD790 /* UserViewController.swift in Sources */,
 				C18CA5E82A3AAC7E006E336B /* AppCoordinator.swift in Sources */,
 				C1FA74072A39A7D700385D9A /* ViewController.swift in Sources */,
+				C123553D2A3AF70B008DD790 /* UpdateDataModel.swift in Sources */,
 				C1FA74032A39A7D700385D9A /* AppDelegate.swift in Sources */,
 				C18CA5E62A3AAA0F006E336B /* Coordinator.swift in Sources */,
 				C12355372A3AC4FB008DD790 /* UserModel.swift in Sources */,
